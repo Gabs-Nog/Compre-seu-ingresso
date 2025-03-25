@@ -4,6 +4,11 @@ function comprar(){
     console.log(ingresso);
     let quantidade = parseInt(document.getElementById('qtd').value);
     console.log(quantidade);
+    
+    if (isNaN(quantidade) || quantidade <= 0) {
+        alert('Por favor, insira uma quantidade válida.');
+        return;
+    }
 
     if(ingresso == 'pista'){
         comprarPista(quantidade);
